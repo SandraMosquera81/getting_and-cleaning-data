@@ -1,4 +1,4 @@
-The data
+#The data
 
 The dataset includes the following files:
 
@@ -18,7 +18,8 @@ The dataset includes the following files:
 
 'test/y_test.txt': Test labels.
 
-The following files are available for the train and test data. Their descriptions are equivalent.
+#The following files are available for the train and test data. 
+Their descriptions are equivalent.
 
 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
 
@@ -28,11 +29,11 @@ The following files are available for the train and test data. Their description
 
 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
-Transformations in the run_analisys.R
-#create a directory
-#download the data
-#unzip data and read data
-#Uses descriptive activity names to name the activities in the data set
-#Merges the training and the test sets to create one data set.
-#Extracts only the measurements on the mean and standard deviation for each measurement.
-#Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+#Transformations in the run_analisys.R
+create a directory
+download the data
+unzip data and read data
+Uses descriptive activity names to name the activities in the data set
+Merges the training and the test sets to create one data set.
+Extracts only the measurements on the mean and standard deviation for each measurement.
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.

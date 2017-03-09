@@ -49,6 +49,12 @@ y_train[,1]<- activityLabels[y_train[,1],2]
 # names(y_train) <- "activity"
 
 
+# get only columns with mean() or std() in their names
+mean_and_std_features <- grep("-(mean|std)\\(\\)", features[, 2])
+
+# subset the desired columns
+x_data <- x_data[, mean_and_std_features]
+
 # create 'x' data set
 x_data <- rbind(x_train, x_test)
 
@@ -60,5 +66,9 @@ subject_data <- rbind(subject_train, subject_test)
 
 all_data <- cbind(x_data, y_data, subject_data)
 
+
 averages_data <- ddply(all_data, .(subjectId, activityId), function(x) colMeans(x[, 1:66]))
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
+write.table(averages_data, "tidy.txt", row.name=FALSE)
+
+
+
